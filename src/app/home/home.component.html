@@ -1,0 +1,74 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+           
+               <a>
+                <h6>All Food</h6>
+            </a>
+        </div>
+        <div class="item">
+            
+                <a>
+                <h6>Indian</h6>
+            </a>
+        </div>
+        <div class="item">
+           
+                <a>
+                <h6>Chinese</h6>
+            </a>
+        </div>
+        <div class="item">
+           
+               <a>
+                <h6>Italian</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Cuisine</th>
+            <th>Offer</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products">
+            <td>{{product.prodname}}</td>
+            <td>{{product.descr}}</td>
+            <td>{{product.price | currency}}</td>
+            <td>{{product.cuisine}}</td>
+            <td>{{product.offer}}</td>
+            <td>
+                <button class = "btn btn-info">Add to Cart</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+    <li *ngFor="let food of foods">
+        <a>
+        <img src="{{food}}" alt="food images">
+        </a>
+    </li>
+    <li *ngFor = "let product of products">
+        <div class="content">
+            <div class="name">
+                {{product.prodname}}
+                {{product.descr}}
+                {{product.price | currency}}
+            </div>
+        </div>
+
+    </li>
+</ul>
+

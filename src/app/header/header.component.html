@@ -1,0 +1,48 @@
+<!--<header>
+    <div class="container">
+      <a routerLink="/" class="logo">FoodBox</a>
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/login">Admin Login</a>
+          </li>
+          <li class="menu-container">
+            <a routerLink="/dashboard">User Login</a>
+            <div class="menu">
+              <a routerLink="/profile">Profile</a>
+              <a routerLink="/orders">Orders</a>
+              <a>Logout</a>
+            </div>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>-->
+  <header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px;" class="fa-solid fa-pot-food">&nbsp;
+                
+            </i>
+            <strong style="font-size: 30px;" routerLink="/products" >FoodBox</strong>
+           <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+          
+        <ul>
+          <li>
+            <a routerLink="/admin">Admin Login</a>
+            <a routerLink="/user-login">User Login</a>
+          </li>
+          
+        </ul>
+
+       </div>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+
